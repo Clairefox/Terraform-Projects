@@ -1,6 +1,7 @@
 # Carla's Terraform Web App
 
 ## Table of Contents
+
 1. <a href="#Project-Requirements">Project Requirements</a>
     1. <a href="#Extra-Credit">Extra Credit</a>
 2. <a href="#Built-With">Built With</a>
@@ -15,6 +16,7 @@
 7. <a href="#Acknowledgements">Acknowledgements</a>
 
 ## Project Requirements
+
 Using Terraform v12, build a module meant to deploy a web application that supports the following design:
 - It must include a VPC which enables future growth / scale
 - It must include both a public and private subnet - where the private subnet is used for compute and the public is used for the load balancers
@@ -29,6 +31,7 @@ Using Terraform v12, build a module meant to deploy a web application that suppo
 - *Your module should not be tightly coupled to your AWS account - it should be designed so that it can be deployed to any arbitrary AWS account*
 
 ### Extra Credit
+
 - You must ensure that all data is encrypted at rest
 - Ideally, you should design these web servers so they can be managed without logging in with the root key
 - We should have some sort of alarm mechanism that indicates when the application is experiencing any issues
@@ -36,29 +39,43 @@ Using Terraform v12, build a module meant to deploy a web application that suppo
 - You should assume that this web server may receive high volumes of web traffic, thus you should appropriately manage the storage / growth of logs
 
 ## Built With
+
 * [Markdown](https://www.markdownguide.org/basic-syntax/#reference-style-links)
 
 ## Using This Project
 
 ### Prerequisites
 
+- [Download and Install Terraform](https://www.terraform.io/downloads)
+- [Download and Install Docker Desktop](https://docs.docker.com/docker-hub/) - to app locally
+- [Download and Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
 ### Setup
+
+1. Create terraform file - in progress
+2. Update terraform provider to reflect needful aws region
+3. Update resources to use appropriate ami instance to launch with based on region [Steps here on how to find a windows ami](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/finding-an-ami.html)
 
 ### Module Inputs
 
 ### Design Notes
 
 ## Contributing
+
 Since this is a personal project, this repo is not open to contributors. 
 However, if you find an issue or want to suggest something to me, please feel free to submit an [issue/feature request](https://github.com/Clairefox/Terraform-Web-App/issues)!
 
 ## License
 
+See [License File](https://github.com/Clairefox/Terraform-Web-App/blob/main/LICENSE) for more information.
+
 ## Contact
+
 * Carla Young - claire.2007@live.com
 * Project Link: [https://github.com/Clairefox/Terraform-Web-App](https://github.com/Clairefox/Terraform-Web-App)
 
 ## Acknowledgements
+
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Img Shields](https://shields.io)
