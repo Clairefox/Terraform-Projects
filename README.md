@@ -1,4 +1,4 @@
-# Carla's Terraform Web App
+# Carla's Terraform Projects
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@
 
 ## Project Requirements
 
-Using Terraform v12, build a module meant to deploy a web application that supports the following design:
+Using Terraform v1.2, build a module meant to deploy a web application that supports the following design:
 - It must include a VPC which enables future growth / scale
 - It must include both a public and private subnet - where the private subnet is used for compute and the public is used for the load balancers
 - Assuming that end-users only contact the load balancers and the underlying instances are accessed for management purposes, design a security group scheme which supports the minimal set of ports required for communication
@@ -60,23 +60,29 @@ Using Terraform v12, build a module meant to deploy a web application that suppo
 
 ### Design Notes
 
+- Not Using Terraform Cloud to Store Remote State
+    - Ideally, this repository would be the one truth of the configurations of the project. It would include secured branches requiring code review and approvals for pull requests into the "production" branch. DEV/TEST/QA branches would be created as needed for new features and hotfixes and have GitHub actions on a self-hosted runner kicking off the deploys and testing. Once passed, then the final approved pull request into PROD would have its GitHub action to deploy to the live instances.
+
 ## Contributing
 
 Since this is a personal project, this repo is not open to contributors. 
-However, if you find an issue or want to suggest something to me, please feel free to submit an [issue/feature request](https://github.com/Clairefox/Terraform-Web-App/issues)!
+However, if you find an issue or want to suggest something to me, please feel free to submit an [issue/feature request](https://github.com/Clairefox/Terraform-Projects/issues)!
 
 ## License
 
-See [License File](https://github.com/Clairefox/Terraform-Web-App/blob/main/LICENSE) for more information.
+See [License File](https://github.com/Clairefox/Terraform-Projects/blob/main/LICENSE) for more information.
 
 ## Contact
 
-* Carla Young - claire.2007@live.com
-* Project Link: [https://github.com/Clairefox/Terraform-Web-App](https://github.com/Clairefox/Terraform-Web-App)
+- Carla Young - claire.2007@live.com
+- Project Link: [https://github.com/Clairefox/Terraform-Projects](https://github.com/Clairefox/Terraform-Projects)
 
 ## Acknowledgements
 
-* [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
+- [Terraform Tutorials](https://learn.hashicorp.com/tutorials/terraform/aws-variables?in=terraform/aws-get-started)
+- [Docker Tutorials](https://docs.docker.com/docker-hub/)
+- [AWS Tutorials](https://aws.amazon.com/getting-started/)
+- [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Img Shields](https://shields.io)
+- [Choose an Open Source License](https://choosealicense.com)
